@@ -16,4 +16,10 @@ object AdventUtil {
         problems[DayOne.problemDay] = DayOne.Companion
         return problems
     }
+
+    fun problemsToTest(wantedProblems: List<String>): List<AdventProblem> {
+        return initializeProblems().filter { predicate ->
+            wantedProblems.contains(predicate.key)
+        }.values.toList()
+    }
 }
