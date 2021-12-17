@@ -2,7 +2,7 @@ package com.advent
 
 fun main(args: Array<String>) {
     val problems = AdventUtil.problemsToTest(listOf(
-        "day1"
+        "day2"
     ))
 
     for (problem in problems) {

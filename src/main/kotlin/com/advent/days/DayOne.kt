@@ -1,4 +1,7 @@
-package com.advent
+package com.advent.days
+
+import com.advent.AdventProblem
+import com.advent.AdventUtil
 
 class DayOne {
     companion object : AdventProblem {

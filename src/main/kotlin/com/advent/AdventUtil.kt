@@ -1,6 +1,6 @@
 package com.advent
 
-import java.io.BufferedReader
+import com.advent.days.*
 import java.io.File
 
 object AdventUtil {
@@ -11,9 +11,14 @@ object AdventUtil {
         return File(path + filename + ending).bufferedReader().readLines().map { it.toInt() }
     }
 
+    fun fileToString(filename: String): List<String> {
+        return File(path + filename + ending).bufferedReader().readLines()
+    }
+
     private fun initializeProblems(): HashMap<String, AdventProblem> {
         val problems = hashMapOf<String, AdventProblem>()
         problems[DayOne.problemDay] = DayOne.Companion
+        problems[DayTwo.problemDay] = DayTwo.Companion
         return problems
     }
 
