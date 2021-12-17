@@ -11,7 +11,7 @@ object AdventUtil {
         return File(path + filename + ending).bufferedReader().readLines().map { it.toInt() }
     }
 
-    fun initializeProblems(): HashMap<String, AdventProblem> {
+    private fun initializeProblems(): HashMap<String, AdventProblem> {
         val problems = hashMapOf<String, AdventProblem>()
         problems[DayOne.problemDay] = DayOne.Companion
         return problems
